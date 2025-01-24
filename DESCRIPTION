@@ -1,0 +1,11 @@
+Package: bxfun
+Title: Miscellaneous functions used across projects
+Version: 0.0.0.9000
+Authors@R: 
+    person("Bowen", "Xiao", , "bx226@cantab.ac.uk", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-9627-3454"))
+Description: For personal use, host functions shared across projects; a practice in creating R packages.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
