@@ -5,6 +5,13 @@ Authors@R:
     person("Bowen", "Xiao", , "bx226@cantab.ac.uk", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-9627-3454"))
 Description: For personal use, host functions shared across projects; a practice in creating R packages.
+Depends: R (>= 4.0.0)
+Imports: 
+    ggplot2 (>= 3.4.0),
+    dplyr,
+    rstudioapi	
+Suggests:
+    papaja
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
