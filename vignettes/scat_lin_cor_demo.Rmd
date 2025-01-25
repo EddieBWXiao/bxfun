@@ -1,0 +1,41 @@
+---
+title: "Scatter Plots with scat_lin_cor"
+author: "Bowen Xiao"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Scatter Plots with Correlation Coefficients Using bxfun}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Introduction
+
+This vignette demonstrates how to use the `scat.lin.cor` function from the `bxfun` package to create scatter plots with correlation coefficients and optional Bayes Factors. We'll use the built-in `mtcars` dataset for this example.
+
+# Example: Visualizing Relationships in `mtcars`
+
+The `mtcars` dataset includes information on various car models, including their fuel efficiency (`mpg`) and horsepower (`hp`).
+
+First, load the `bxfun` package and the required libraries:
+
+```{r}
+# Load libraries
+library(bxfun)
+library(ggplot2)
+
+# Load the dataset
+data("mtcars")
+```
+
+```{r}
+# Deal with variables
+mtcars$hp_inv<-1/mtcars$hp
+mtcars$mpg<-scale2num(mtcars$mpg)
+mtcars$hp<-scale2num(mtcars$hp)
+
+# Create scatter plot with correlation
+scat.lin.cor(mtcars,"mpg","hp",refline = T,BF=T,ci=F,
+             xlab = "z-scored miles per gallon",
+             ylab = "z-scored horsepower")
+```
